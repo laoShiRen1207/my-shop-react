@@ -7,7 +7,7 @@ import React from 'react'
 import Login from "../views/Login"
 import PageNotFound from "../views/PageNotFound"
 
-import Index from "../views/admin/Dashboard/Index"
+import Index from "../views/admin/dashboard/Index"
 import List from "../views/admin/products/List"
 import Edit from "../views/admin/products/Edit"
 
@@ -41,7 +41,8 @@ export const dashboardRoutes = [
         title: "商品列表",
         icon: <ShopOutlined />
     }, {
-        path: '/admin/products/edit/:id',
+        // id 作为可选参数
+        path: '/admin/products/edit/:id?',
         component: Edit,
         isShow: false,
     }
