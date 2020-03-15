@@ -50,3 +50,14 @@ npm -v
 ~~~
 
 ### 使用项目
+~~~bash
+## 进入项目
+cd my-shop-react
+## 安装依赖包 
+npm install
+## 启动服务 
+npm start
+## 打包构建 
+npm build
+~~~
+
