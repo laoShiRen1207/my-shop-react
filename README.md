@@ -2,6 +2,9 @@
 ![](https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg)
 
 ## 使用react + AntDesign 开发一个后台dashboard 项目
+效果图 -- 2020年03月15日18:14:25
+!()[https://img-blog.csdnimg.cn/20200315181317602.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEyNjQ2OA==,size_16,color_FFFFFF,t_70]
+
 ### 开发环境
 ~~~bash
 node -v
