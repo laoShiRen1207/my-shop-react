@@ -33,7 +33,7 @@ const columns = [
                 <Row justify="space-around">
                     <Button type="primary" size="small" >
                         <EditOutlined />编辑</Button>
-                    {/* popconfirm 之后的2个时间以后用函数来完成 */}
+                    {/* popconfirm 之后的2个事件以后用函数来完成 */}
                     <Popconfirm title="注意,是否确认删除？" onCancel={() => console.log("取消删除")} onConfirm={() => console.log("确定删除")}>
                         <Button size="small" type="danger">
                             <DeleteOutlined />删除</Button>

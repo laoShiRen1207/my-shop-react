@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { withRouter } from 'react-router-dom'
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu } from 'antd';
 import logo from './logo192.png';
 import { dashboardRoutes } from '../../routes'
 
