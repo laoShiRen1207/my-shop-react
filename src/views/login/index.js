@@ -36,8 +36,7 @@ class Login extends Component {
                                 className="login-form"
                                 style={{maxWidth: 300 }}
                                 initialValues={{ remember: true }}
-                                onFinish={value =>{this.onFinish(value)}}
-                                >
+                                onFinish={value =>{this.onFinish(value)}}>
                                 <Form.Item
                                     name="username"
                                     rules={[{ required: true, message: '输入账号' }]}
