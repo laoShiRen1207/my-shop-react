@@ -4,7 +4,7 @@
 import React from 'react'
 
 
-import Login from "../views/Login"
+import Login from "../views/login/index"
 import PageNotFound from "../views/PageNotFound"
 
 import Index from "../views/admin/dashboard/Index"

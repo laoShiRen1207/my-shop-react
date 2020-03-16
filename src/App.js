@@ -4,6 +4,8 @@ import './App.css';
 import { dashboardRoutes } from './routes'
 import Frame from './components/Frame'
 
+import { isLogined } from './utils/auth2'
+
 class App extends Component {
 
   constructor(props) {
@@ -12,8 +14,10 @@ class App extends Component {
 
     }
   }
+
   render() {
-    return (
+    return ( 
+      isLogined()?
       <Frame>
         <Switch>
           {
@@ -29,7 +33,7 @@ class App extends Component {
           }
           <Redirect to="/404" />
         </Switch>
-      </Frame>
+      </Frame>: <Redirect to="/login" /> 
     );
   }
 }
