@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Switch, Route, Redirect} from 'react-router-dom'
 import './App.css';
 import { dashboardRoutes } from './routes'
-import Frame from './components/Frame'
+import Frame from './components/frame'
 
 import { isLogined } from './utils/auth2'
 

@@ -6,8 +6,8 @@ import React from 'react'
 
 import Login from "../views/login/index"
 import PageNotFound from "../views/PageNotFound"
-
-import Index from "../views/admin/dashboard/Index"
+import Avatar from "../components/avatar/index"
+import Home from "../views/admin/dashboard/index"
 import List from "../views/admin/products/List"
 import Edit from "../views/admin/products/Edit"
 
@@ -21,6 +21,9 @@ export const mainRoutes = [
     }, {
         path: '/404',
         component: PageNotFound
+    }, {
+        path: '/avatar',
+        component: Avatar
     }
 ]
 
@@ -28,7 +31,7 @@ export const mainRoutes = [
 export const dashboardRoutes = [
     {
         path: '/admin',
-        component: Index,
+        component: Home,
         exact: true,
         isShow: true,
         title: "控制面板",
