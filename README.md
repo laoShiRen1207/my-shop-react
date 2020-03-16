@@ -1,5 +1,5 @@
 ![react](https://img-blog.csdnimg.cn/20200308222613109.png)
-![antd](https://github.com/laoShiRen1207/my-shop-react/blob/master/public/antd.jpg)
+![antd](https://img-blog.csdnimg.cn/20200316173557547.jpg)
 
 ## 使用react + AntDesign 开发一个后台dashboard 项目
 效果图 -- 2020年03月16日17:30:48
