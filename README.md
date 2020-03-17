@@ -7,7 +7,7 @@
 ![photo](https://github.com/laoShiRen1207/my-shop-react/blob/master/public/currentDemo.png)
 
 ### 说明
-该项目适合入门级玩家，只需要在`./src/views/`添加自己的页面,然后在`./src/routes`添加对应的路由即可。所有请求需要经过`./src/api/request.js`发起，请求需要发送一个`access_token`，该`access_token`需要在登录过程中会保存。
+该项目适合入门级玩家，本人并非前端开发，所以会存在bug 或者并不合理的地方，还请指出。部分组件需要自行查找安装
 
 开发进度
 | 功能  | 开发进度                    | 备注   |
