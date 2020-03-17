@@ -72,6 +72,8 @@ npm -v
 
 ### 使用项目
 ~~~bash
+## clone
+git clone https://github.com/laoShiRen1207/my-shop-react.git
 ## 进入项目
 cd my-shop-react
 ## 安装依赖包 
@@ -79,7 +81,7 @@ npm install
 ## 启动服务 
 npm start
 ## 打包构建 
-npm build
+npm run build
 ~~~
 
 ### 写在最后
