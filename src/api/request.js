@@ -3,7 +3,7 @@ import axios from 'axios'
 import { getToken } from '../utils/auth2'
 
 const instance = axios.create({
-    baseURL: "http://127.0.0.1/8400",
+    baseURL: "http://127.0.0.1:5500/",
     timeout : 5000
 })
 // 全局请求和响应的拦截

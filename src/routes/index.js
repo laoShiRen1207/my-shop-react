@@ -10,6 +10,8 @@ import Avatar from "../components/avatar/index"
 import Home from "../views/admin/dashboard/index"
 import List from "../views/admin/products/List"
 import Edit from "../views/admin/products/Edit"
+import Video from "../views/admin/video"
+import Article from "../views/admin/markdown"
 
 import { AreaChartOutlined,ShopOutlined} from '@ant-design/icons';
 
@@ -48,5 +50,21 @@ export const dashboardRoutes = [
         path: '/admin/products/edit/:id?',
         component: Edit,
         isShow: false,
+    }, {
+        // id 作为可选参数
+        path: '/admin/products/v',
+        component: Video,
+        isShow: true,
+        exact: true,
+        title: "视频",
+        icon: <ShopOutlined />
+    }, {
+        // id 作为可选参数
+        path: '/admin/products/markdown',
+        component: Article,
+        isShow: true,
+        exact: true,
+        title: "文章",
+        icon: <ShopOutlined />
     }
 ]

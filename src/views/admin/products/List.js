@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { Card, Table, Modal, Button, Row, Popconfirm } from 'antd';
+import { Card, Table, Modal, Button, Row, Popconfirm, message } from 'antd';
 
 import Edit from './Edit';
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
 
-
+import {getList} from '../../../api/services/product'
 
 const columns = [
     {
@@ -15,13 +15,13 @@ const columns = [
         // 加上序号
         render: (txt, record, index) => index + 1
     }, {
-        title: '名称',
-        dataIndex: 'name',
-        key: 'name',
+        title: '作者',
+        dataIndex: 'nickName',
+        key: 'nickName',
     }, {
-        title: '价格',
-        dataIndex: 'price',
-        key: 'price',
+        title: '赞',
+        dataIndex: 'diggCount',
+        key: 'diggCount',
     }, {
         title: '描述',
         dataIndex: 'description',
@@ -44,22 +44,44 @@ const columns = [
     }
 ];
 
-const data = [];
-for (let i = 0; i < 21; i++) {
-    data.push({
-        key: i,
-        name: `Good ${i}`,
-        price: 10.00,
-        description: `Good’s description ${i}`,
-    });
-}
+
+
 
 class List extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            visible: false
+            visible: false,
+            
         }
+    }
+
+    componentDidMount(){
+        this.getListPrama()
+    }
+
+    getListPrama(){
+        getList()
+            .then(res=> {
+                var list = res.data.aweme_list
+                var dataSource = [];
+                for (var i = 0 ; i< list.length; i++){ 
+                    var param = list[i];
+                    dataSource.push({
+                        key: i,
+                        nickName: param.author.nickname,
+                        diggCount: param.statistics.digg_count,
+                        description: param.desc,
+                    })
+                }
+                this.setState({
+                    dataSource:dataSource
+                })
+
+            })
+            .catch(err =>{
+                console.log(err)
+            })
     }
 
     showModal = () => {
@@ -75,13 +97,13 @@ class List extends Component {
     render() {
         return (
             <div>
-                <Card title="商品列表"
+                <Card title="视频列表"
                     extra={
                         <Button onClick={this.showModal} type="primary" size="small" >新增</Button>
                     }>
 
                     {/* table 开始 */}
-                    <Table bordered={true} dataSource={data} columns={columns} >
+                    <Table bordered={true} dataSource={this.state.dataSource} columns={columns} >
 
                     </Table>
                     {/* table 结束 */}
@@ -89,7 +111,6 @@ class List extends Component {
                         title="编辑"
                         visible={this.state.visible}
                         onCancel={this.handleCancel}
-                        
                         footer = ""
                         destroyOnClose= "true">
                         
